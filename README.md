@@ -4,11 +4,12 @@
 
 In order to run the code, following packages are required: 
 
+* sys
 * json
-* urllib.parse
-* urllib.request
-* urllib.error
 * lxml.etree
+* urllib.parse
+* urllib.error
+* urllib.request
 
 ## Buidling the Catalogue
 
