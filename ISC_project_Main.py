@@ -65,7 +65,7 @@ from ISC_Project_Functions import jsonsearcher
 if __name__ == "__main__":
     search = " "
     while not search == "q":
-        search = input("What are we looking for? (or q: to quit): ")
+        search = input("What are we looking for? (or 'q' to quit): ")
         if search == 'q':
             print("Querying DBPedia Ended")
             break
@@ -88,10 +88,4 @@ if __name__ == "__main__":
             # 6 Iterate over the JSON file and extract the wanted metadata
                 FINAL_DATA = jsonsearcher(POSSIBLE_URI, JSON_URI)    
            
-
-
-# In[ ]:
-
-
-#18/01
 
