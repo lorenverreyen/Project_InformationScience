@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[67]:
 
 
 #Packages to install
+import sys
 import json
-import urllib.parse
-import urllib.request
-import urllib.error
 import lxml.etree
+import urllib.parse
+import urllib.error
+import urllib.request
 
 
-# In[9]:
+# In[68]:
 
 
 CODES = {}
@@ -22,43 +23,43 @@ CODES[429] = "The request could be served because the application has reached it
 CODES[500] = "Internal Server Error. Something has gone wrong, which we will correct."
 
 
-# In[10]:
+# In[60]:
 
 
 from ISC_Project_Functions import getAPIprefix
 
 
-# In[11]:
+# In[61]:
 
 
 from ISC_Project_Functions import query_DBpedia1
 
 
-# In[12]:
+# In[62]:
 
 
 from ISC_Project_Functions import parser4
 
 
-# In[13]:
+# In[63]:
 
 
 from ISC_Project_Functions import titleselector
 
 
-# In[14]:
+# In[64]:
 
 
 from ISC_Project_Functions import API_to_JSON
 
 
-# In[15]:
+# In[65]:
 
 
 from ISC_Project_Functions import jsonsearcher
 
 
-# In[ ]:
+# In[66]:
 
 
 if __name__ == "__main__":
