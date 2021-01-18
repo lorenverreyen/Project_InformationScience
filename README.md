@@ -17,7 +17,7 @@ This code builds a public access catalogue for the Great Books, based on informa
 The metadata that will be extracted is the following:
 * Title book
 * Author
-* Short introdcution on the author
+* About the author
 * Abstract
 * Original language
 * Country
