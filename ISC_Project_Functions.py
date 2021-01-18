@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[21]:
+# In[1]:
 
 
 #Packages to install
+import sys
 import json
-import urllib.parse
-import urllib.request
-import urllib.error
 import lxml.etree
+import urllib.parse
+import urllib.error
+import urllib.request
 
 
-# In[22]:
+# In[2]:
 
 
 CODES = {}
@@ -22,7 +23,7 @@ CODES[429] = "The request could be served because the application has reached it
 CODES[500] = "Internal Server Error. Something has gone wrong, which we will correct."
 
 
-# In[23]:
+# In[3]:
 
 
 #Prefix of the DBPedia lookup API
@@ -40,7 +41,7 @@ def getAPIprefix() -> str:
     sys.exit("No functioning DBpedia lookup API found!")
 
 
-# In[24]:
+# In[4]:
 
 
 #Cleaning up the input string
@@ -52,7 +53,7 @@ def clean(string: str) -> str:
     return string
 
 
-# In[25]:
+# In[5]:
 
 
 #Querying API and return the response (or errorcode)
@@ -68,7 +69,7 @@ def query_DBpedia1(prefix, search: str) -> bytes:
         exit(URLerr)
 
 
-# In[26]:
+# In[6]:
 
 
 # Transforming the API to a jupyter dictionary to be able to iterate over it.
@@ -95,7 +96,7 @@ def parser4(search_response: bytes) -> dict:
     return diction
 
 
-# In[27]:
+# In[7]:
 
 
 # Returning the possible book titles to the user, they select one title to continue with.
@@ -119,7 +120,7 @@ def titleselector(possiblefields):
                 
 
 
-# In[28]:
+# In[8]:
 
 
 # Transforming the resource URL to JSON URL.
@@ -132,7 +133,7 @@ def API_to_JSON(link):
     return json_uri
 
 
-# In[29]:
+# In[9]:
 
 
 # jsonsearcher iterates over the JSON file, looking for metadata we want to extract.
